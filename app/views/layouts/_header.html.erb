@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "勤怠システム", root_path, id: "logo" %>
+    <%= link_to "JCITA - BASIC", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "トップへ", root_path %></li>
+        <li><%= link_to "Top", root_path %></li>
         <% if logged_in? %>
           <% if admin_user? %>
             <li><%= link_to "ユーザー一覧", users_path %></li>
@@ -22,12 +22,12 @@
               <li><%= link_to "個人情報編集", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "ログアウト", logout_path, method: :delete %>
+                <%= link_to "Logout", logout_path, method: :delete %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "ログイン", login_path %></li>
+          <li><%= link_to "Login", login_path %></li>
         <% end %>
       </ul>
     </nav>
