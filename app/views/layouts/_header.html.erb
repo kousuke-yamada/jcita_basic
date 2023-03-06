@@ -13,13 +13,13 @@
           <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              アカウント <b class="caret"></b>
+              Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <% unless admin_user? %>
-                <li><%= link_to "勤怠", current_user %></li>
+                <li><%= link_to "診断結果", current_user %></li>
               <% end %>
-              <li><%= link_to "個人情報編集", edit_user_path(current_user) %></li>
+              <li><%= link_to "アカウント情報", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Logout", logout_path, method: :delete %>
