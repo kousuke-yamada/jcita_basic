@@ -18,6 +18,12 @@ gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
 gem 'roo'
 gem 'mini_racer'
+gem 'devise'  # LINEログイン機能
+gem 'omniauth-line'
+gem 'omniauth-rails_csrf_protection'
+gem 'dotenv-rails'
+gem 'typhoeus'
+gem 'mechanize'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

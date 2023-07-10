@@ -1,10 +1,25 @@
 <% provide(:title, @user.name) %>
 <div>
-  <h3>氏名</h3>
-  <%= @user.name %>さん、こんにちは<br>
-  <h3>ステータス</h3>
-  まだ診断していません。
+  <div>
+    <h3>⭐️<%= @user.name %> さん⭐️</h3>
+  </div>
 
-  <h3>診断開始はこちらから</h3>
-  <%= link_to "START", user_path, class: "btn btn-lg btn-info center-block", id: "start_button" %>
+  <div class="typing">
+    
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+
+    <p id="label">Click to Start!</p>
+    <p id="target">　</p>
+    <input id="backtype" type="button" value="もう1回" onclick="myfunc()" class="btn btn-lg btn-primary">
+
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+
+  </div>
+
+  <%= javascript_include_tag "typecode.js" %>
+
 </div>

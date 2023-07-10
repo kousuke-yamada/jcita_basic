@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  devise_for :lineusers, controllers: {
+    omniauth_callbacks: "omniauth_callbacks"
+  }
+
+  get 'line_login_api/login', to: 'line_login_api#login'
+  get 'line_login_api/callback', to: 'line_login_api#callback'
+
   root 'static_pages#top'
   get '/signup', to: 'users#new'
   

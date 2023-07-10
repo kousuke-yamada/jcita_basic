@@ -1,6 +1,6 @@
 <% provide(:title, "Top") %>
 <div class="center">
-  <h1 class="top-logo">個性が分かる心理テスト<br>JCITA - BASIC</h1>
+  <h1 class="top-logo">Typing Practice</h1>
   <!-- ログイン状態時はログインボタン無効にする -->
   <% if logged_in? %>
     <%= link_to "ログイン状態です", '#', class: "btn btn-lg btn-primary disabled", disabled: true %>
@@ -11,4 +11,13 @@
   <% if !logged_in? || admin_user? %>
     <p>アカウント作成は<%= link_to "こちら", signup_path %>から</p>
   <% end %>
+
+  <form class="button_to" method="post" action="/lineusers/auth/line">
+    <input data-turbo="false" type="submit" value="Sign in with Line">
+    <input type="hidden" name="authenticity_token" value="L1AGg0f9fHZ2gzKafIEV0nCcLA+ys7kA4aqPnOUf0+l2HV82aFCKlEMoarn/q2bPAd6InS46Bii9ZRJ3d/O8CQ==">
+  </form>
+
+  <%= link_to "LINEでログイン", line_login_api_login_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium" %>
+  <br/>
+ 
 </div>
