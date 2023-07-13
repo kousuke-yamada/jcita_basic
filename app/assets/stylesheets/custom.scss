@@ -5,7 +5,7 @@
 
 body {
   padding-top: 60px;
-  background-image: image-url('top.jpg');
+  // background-image: image-url('top.jpg');
   background-size: cover;
 }
 
@@ -35,7 +35,7 @@ textarea {
 
 /* ヘッダーナビゲーションバー */
 .navbar {
-  background-color: rgba(0,0,9,0.75);
+  background-color: #000000;
 }
 
 /* タイトル画面のボタン */
@@ -106,7 +106,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -213,4 +213,26 @@ p {
 .attendance_month_apply {
   width: 100%;
   margin-bottom: 5px;
+}
+
+/* タイトル画面のボタン */
+p#start_button {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #FF5722;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	border: double 4px #FF5722;
+	border-radius: 50%;
+	vertical-align: middle;
+	overflow: hidden;
+	transition: .6s;
+	font-size: 22px;
+	background-color: #fff;
+	outline:none;
+}
+p#start_button:hover {
+	transform: rotateY(360deg);
 }

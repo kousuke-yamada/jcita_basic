@@ -28,6 +28,13 @@ Rails.application.routes.draw do
       # csvエクスポート
       get :csv_export, defaults: {format: 'csv'}
 
+      # タイピング
+      get 'mode_easy'
+      get 'mode_hard'
+      get 'mode_cat'
+      patch 'save_record'
+      get 'ranking'
+
       # 勤怠修正ログ(承認済)
       get 'attendances/disp_log'
       post 'attendances/search_log'

@@ -137,25 +137,46 @@ table.user-table tr td.basic_info_header {
   font-size: 48px;
   letter-spacing: .1em;
   text-align: center;
+  color:#000000;
 }
 #target {
   font-size: 48px;
   letter-spacing: .1em;
   text-align: center;
+  color:#000000;
 }
-#result {
+#best {
   font-size: 48px;
   letter-spacing: .1em;
   text-align: center;
+  color:#bb0000;
 }
 .typing {
   color: #ffffff;
   width: 100%;
-  text-align: center;
-  background-image: image-url('kokuban3.png');
-  background-size: cover;
-  
+  text-align: center; 
 }
 #backtype {
   text-align: center;
+  display: none;
+}
+
+#timer {
+  font-size: 48px;
+  letter-spacing: .1em;
+  text-align: center;
+  color:#000000;
+}
+
+#ranking-table{
+  th, td {
+    text-align: center;
+  }
+}
+
+.footer_logo {
+  text-align: center; 
+  // position: absolute;
+  // bottom: 10%;
+  
 }

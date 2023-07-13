@@ -1,25 +1,34 @@
 <% provide(:title, @user.name) %>
 <div>
-  <div>
-    <h3>⭐️<%= @user.name %> さん⭐️</h3>
+  <h3>🐈‍⬛<%= @user.name %> さん🐈‍⬛</h3>
+  
+  <h2>モード選択</h2>
+  <div class="center">
+    🐈‍⬛　好きな猫を選んでね　🐈‍⬛
   </div>
+  <br/>
+  
+  <div class="row">
+    <!--ページロゴ表示＆アカウント作成ボタン表示-->
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-4">
+        
+        <%= link_to image_tag("neko1.png", class: "center"), mode_easy_user_path %>
+        <p class="center">【Easy】</p>
+    </div>
 
-  <div class="typing">
-    
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
+    <div class="col-md-4">
+      
+      <%= link_to image_tag("neko5.png", class: "center"), mode_hard_user_path %>
+      <p class="center">【Hard】</p>
+    </div>
 
-    <p id="label">Click to Start!</p>
-    <p id="target">　</p>
-    <input id="backtype" type="button" value="もう1回" onclick="myfunc()" class="btn btn-lg btn-primary">
+    <div class="col-md-4">
+      
+      <%= link_to image_tag("neko3.png", class: "center"), mode_cat_user_path %>
+      <p class="center">【Cat】</p>
+    </div>
 
-    <p>　</p>
-    <p>　</p>
-    <p>　</p>
-
-  </div>
-
-  <%= javascript_include_tag "typecode.js" %>
+  </div>  
 
 </div>

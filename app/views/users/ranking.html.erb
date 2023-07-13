@@ -1,0 +1,94 @@
+<% provide(:title, "Ranking") %>
+<% provide(:class_text, 'user--ranking') %>
+<h1>マイスコア</h1>
+<h2>🐈‍⬛ <%= @user.name %>さんの記録 🐈‍⬛</h2>
+
+<h3>🐈‍⬛ EASYモード</h3>
+<table class="table table-bordered table-condensed table-hover" id="ranking-table">
+  <tbody>
+    <tr>
+      <th>1st</th>
+      <% if @user.records1 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td>👑 <%= @user.records1 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>2nd</th>
+      <% if @user.records2 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records2 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>3rd</th>
+      <% if @user.records3 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records3 %> seconds</td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🐈‍⬛ HARDモード</h3>
+<table class="table table-bordered table-condensed table-hover" id="ranking-table">
+  <tbody>
+    <tr>
+      <th>1st</th>
+      <% if @user.records4 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td>👑 <%= @user.records4 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>2nd</th>
+      <% if @user.records5 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records5 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>3rd</th>
+      <% if @user.records6 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records6 %> seconds</td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🐈‍⬛ CATモード</h3>
+<table class="table table-bordered table-condensed table-hover" id="ranking-table">
+  <tbody>
+    <tr>
+      <th>1st</th>
+      <% if @user.records7 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td>👑 <%= @user.records7 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>2nd</th>
+      <% if @user.records8 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records8 %> seconds</td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>3rd</th>
+      <% if @user.records9 > 999 %>
+        <td>－ No Record －</td>
+      <% else %>
+        <td> <%= @user.records9 %> seconds</td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

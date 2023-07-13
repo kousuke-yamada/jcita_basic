@@ -1,0 +1,30 @@
+<% provide(:title, @user.name) %>
+<div>
+  <div>
+    <h3>🐈‍⬛ HARDモード 🐈‍⬛</h3>
+  </div>
+
+  <div class="typing">
+    <p>　</p>
+    <p>　</p>
+
+    <p id="label">Push SpaceKey To Start!</p>
+    <p id="target">　</p>
+    <p>　</p>
+    
+    <input id="backtype" type="button" value="もう1回挑戦する" onclick="myfunc()" class="btn btn-lg btn-info">
+    　　<%= link_to "モード選択に戻る", user_path, class: "btn btn-lg btn-info", id: "sel_mode" %>
+    　　<%= link_to "マイスコアを見る", ranking_user_path, class: "btn btn-lg btn-info", id: "chk_score" %>
+
+    <input type="hidden" id="mode" value="<%= @mode %>">
+    <input type="hidden" id="user_id" value="<%= @user.id %>">
+    <input type="hidden" id="best_record" value="<%= @best_record %>">    
+  
+  </div>
+  <div class="footer_logo">
+    <%= image_tag "nekotop.png" %>
+  </div>  
+ 
+  <%= javascript_include_tag "typecode.js" %>
+
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20230705165433) do
+ActiveRecord::Schema.define(version: 20230712105158) do
 
   create_table "attendances", force: :cascade do |t|
     t.date "worked_on"
@@ -80,17 +80,21 @@ ActiveRecord::Schema.define(version: 20230705165433) do
     t.string "remember_digest"
     t.boolean "admin", default: false
     t.string "affiliation"
-    t.datetime "basic_work_time", default: "2023-02-05 22:30:00"
-    t.datetime "designated_work_start_time", default: "2023-02-06 00:30:00"
+    t.datetime "basic_work_time", default: "2023-07-11 22:30:00"
+    t.datetime "designated_work_start_time", default: "2023-07-12 00:30:00"
     t.integer "employee_number"
     t.string "uid"
-    t.datetime "designated_work_end_time", default: "2023-02-06 09:00:00"
+    t.datetime "designated_work_end_time", default: "2023-07-12 09:00:00"
     t.boolean "superior", default: false
-    t.integer "records1"
-    t.integer "records2"
-    t.integer "records3"
-    t.integer "records4"
-    t.integer "records5"
+    t.float "records1", default: 999.99
+    t.float "records2", default: 999.99
+    t.float "records3", default: 999.99
+    t.float "records4", default: 999.99
+    t.float "records5", default: 999.99
+    t.float "records6", default: 999.99
+    t.float "records7", default: 999.99
+    t.float "records8", default: 999.99
+    t.float "records9", default: 999.99
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

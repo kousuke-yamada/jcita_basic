@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include AttendancesHelper
   
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :edit_basic_info, :update_basic_info, :confirm_attendance, :csv_export]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :mode_easy, :mode_hard, :mode_cat,:save_record, :ranking, :edit_basic_info, :update_basic_info, :confirm_attendance, :csv_export]
   before_action :logged_in_user, only: [:index,:show, :edit, :update, :destroy, :edit_basic_info, :update_basic_info]
   before_action :correct_user, only: :edit
   before_action :admin_user, only: [:index, :destroy, :edit_basic_info, :update_basic_info, :attendance_at_work, :search]
@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   before_action :set_one_month, only: [:show, :confirm_attendance, :csv_export]
   before_action :set_monthly_attendance, only: [:show, :confirm_attendance]
   before_action :set_superior_user, only: :show
+
+  skip_before_action :verify_authenticity_token
 
   def index
     @users = User.paginate(page: params[:page]).where.not(name: @current_user.name).order(:id)
@@ -69,6 +71,87 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+  def mode_easy
+    @mode = 1
+    @best_record = @user.records1
+  end
+
+  def mode_hard
+    @mode = 2
+    @best_record = @user.records4
+  end
+
+  def mode_cat
+    @mode = 3
+    @best_record = @user.records7
+  end
+
+  def save_record
+    @mode = params[:mode].to_i
+    @record = params[:record].to_f
+
+    case @mode
+    when 1 then # EASYモード
+      if @record < @user.records1
+        @user.records3 = @user.records2
+        @user.records2 = @user.records1
+        @user.records1 = @record
+      
+      elsif @record < @user.records2
+        @user.records3 = @user.records2
+        @user.records2 = @record
+      
+      elsif @record < @user.records3
+        @user.records3 = @record
+      
+      else
+        # ランキング更新しない
+      end
+
+    when 2 then # HARDモード
+      if @record < @user.records4
+        @user.records6 = @user.records5
+        @user.records5 = @user.records4
+        @user.records4 = @record
+      
+      elsif @record < @user.records5
+        @user.records6 = @user.records5
+        @user.records5 = @record
+      
+      elsif @record < @user.records6
+        @user.records6 = @record
+      
+      else
+        # ランキング更新しない
+      end
+
+    when 3 then # CATモード
+      if @record < @user.records7
+        @user.records9 = @user.records8
+        @user.records8 = @user.records7
+        @user.records7 = @record
+      
+      elsif @record < @user.records8
+        @user.records9 = @user.records8
+        @user.records8 = @record
+      
+      elsif @record < @user.records9
+        @user.records9 = @record
+      
+      else
+        # ランキング更新しない
+      end
+    else
+      # 処理なし
+    end
+
+    @user.save    
+  end
+
+  def ranking
+
+  end
+
   def edit_basic_info
   end
   
