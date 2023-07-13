@@ -13,8 +13,7 @@
       <%= link_to "ログイン状態です", '#', class: "btn btn-lg btn-primary disabled", disabled: true %>
     <% else %>
       <%= link_to "ログイン", login_path, class: "btn btn-lg btn-info" %>
-      　<%= link_to "LINEでログイン", line_login_api_login_path, class: "btn btn-lg btn-success" %>
-
+      　<%= link_to image_tag("btn_login_base.png"), line_login_api_login_path, class: "line_login" %>
       <!-- <form class="button_to" method="post" action="/lineusers/auth/line">
       <input data-turbo="false" type="submit" value="Sign in with Line">
       <input type="hidden" name="authenticity_token" value="L1AGg0f9fHZ2gzKafIEV0nCcLA+ys7kA4aqPnOUf0+l2HV82aFCKlEMoarn/q2bPAd6InS46Bii9ZRJ3d/O8CQ==">
