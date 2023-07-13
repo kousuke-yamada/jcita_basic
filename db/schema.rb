@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20230712105158) do
+ActiveRecord::Schema.define(version: 20230713133820) do
 
   create_table "attendances", force: :cascade do |t|
     t.date "worked_on"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20230712105158) do
     t.float "records7", default: 999.99
     t.float "records8", default: 999.99
     t.float "records9", default: 999.99
+    t.string "line_user_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

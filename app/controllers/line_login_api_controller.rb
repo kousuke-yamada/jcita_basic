@@ -29,19 +29,28 @@ class LineLoginApiController < ApplicationController
     # CSRF対策のトークンが一致する場合のみ、ログイン処理を続ける
     if params[:state] == session[:state]
 
-      line_user_id = get_line_user_id(params[:code])
-      line_user = Lineuser.find_or_initialize_by(uid: line_user_id)
+      line_user_id, line_user_name = get_line_user_id(params[:code])
+      line_user = User.find_or_initialize_by(line_user_id: line_user_id)
+
+      if line_user.new_record?
+        line_user.name = line_user_name
+        line_user.password = "password"
+        line_user.password_confirmation = "password"
+      end
 
       if line_user.save
         session[:user_id] = line_user.id
-        redirect_to root_path, notice: "ログインしました。"
+        flash[:success] = 'ログインしました。'
+        redirect_to line_user
         
       else
-        redirect_to root_path, notice: 'ログインに失敗しました'
+        flash[:danger] = 'ログインに失敗しました。'
+        redirect_to root_path
       end
 
     else
-      redirect_to root_path, notice: '不正なアクセスです'
+      flash[:danger] = '不正なアクセスです'
+      redirect_to root_path
     end
 
   end
@@ -68,7 +77,7 @@ class LineLoginApiController < ApplicationController
       response = Typhoeus::Request.post(url, options)
 
       if response.code == 200
-        JSON.parse(response.body)['sub']
+        return JSON.parse(response.body)['sub'], JSON.parse(response.body)['name']
       else
         nil
       end

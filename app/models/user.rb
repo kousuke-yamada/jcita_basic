@@ -3,21 +3,29 @@ class User < ApplicationRecord
   has_many :monthly_attendances, dependent: :destroy
   
   attr_accessor :remember_token
-  before_save { self.email = email.downcase }
   
   validates :name, presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true, 
-                    length: {maximum: 100},
-                    format: {with: VALID_EMAIL_REGEX},
-                    uniqueness: true
-  validates :affiliation, length: {in: 2..30}, allow_blank: true
-  validates :basic_work_time, presence: true
-  validates :designated_work_start_time, presence: true
-  validates :designated_work_end_time, presence: true
+
+  with_options if: :line_login_check do |user|
+    user.before_save { self.email = email.downcase }
+    user.validates :email, presence: true, 
+                      length: {maximum: 100},
+                      format: {with: VALID_EMAIL_REGEX},
+                      uniqueness: true
+    user.validates :affiliation, length: {in: 2..30}, allow_blank: true
+    user.validates :basic_work_time, presence: true
+    user.validates :designated_work_start_time, presence: true
+    user.validates :designated_work_end_time, presence: true
+  end
+
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}, allow_nil:true
   
+  def line_login_check
+    line_user_id.blank?
+  end
+
   # 渡された文字列のハッシュ値を返します
   def User.digest(string)
     cost = 
