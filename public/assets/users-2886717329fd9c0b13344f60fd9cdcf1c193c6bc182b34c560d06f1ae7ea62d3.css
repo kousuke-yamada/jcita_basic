@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/* ユーザー情報テーブル */
+/* line 4, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.user-table {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ユーザー情報下ボタン */
+/* line 10, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.btn-users-show {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* line 14, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.btn-check-log {
+  margin-top: 3px;
+}
+
+/* ユーザー勤怠情報テーブル */
+/* line 19, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances {
+  /* 曜日 */
+}
+/* line 20, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances th {
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 24, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances td {
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 28, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_date_header {
+  width: 4%;
+}
+/* line 31, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_time_header {
+  width: 3%;
+}
+/* line 34, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_btn_header {
+  width: 5%;
+}
+/* line 37, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_worktime_header {
+  font-size: small;
+  width: 5%;
+}
+/* line 41, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_note_header {
+  width: 15%;
+}
+/* line 44, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_apply_header {
+  width: 15%;
+}
+/* line 47, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .attendances_note_body {
+  text-align: left;
+  font-size: 0.9em;
+}
+/* line 53, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .sat_day {
+  color: #0000ff;
+}
+/* line 56, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .sun_day {
+  color: #ff0000;
+}
+/* line 59, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendances .week_day {
+  color: #000000;
+}
+
+/* 入力フォーム */
+/* line 66, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.label-signup {
+  margin-top: 5px;
+}
+
+/* line 70, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.btn-signup {
+  margin-top: 10px;
+}
+
+/* line 74, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.label-user--edit {
+  margin-top: 5px;
+}
+
+/* line 78, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.btn-user--edit {
+  margin-top: 10px;
+}
+
+/* ユーザー一覧ページ */
+/* line 84, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-users td {
+  vertical-align: middle;
+}
+
+/* 基本情報編集モーダルウインドウ */
+/* line 91, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.label-basic-info {
+  margin-top: 5px;
+}
+
+/* line 95, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.btn-basic-info {
+  margin: 15px 0;
+  width: 30%;
+}
+
+/* 検索フォーム */
+/* line 101, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.serach-lable {
+  text-align: right;
+}
+
+/* 勤怠基本情報ヘッダ部 */
+/* line 106, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+table.user-table tr td.basic_info_header {
+  vertical-align: bottom;
+}
+
+/* 出勤中社員一覧テーブル */
+/* line 111, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#table-attendance_at_work th, #table-attendance_at_work td {
+  text-align: center;
+}
+
+/* 申請通知 */
+/* line 117, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.attendance_notification {
+  color: #ff0000;
+  font-weight: bold;
+  border: solid 2px #ff0000;
+}
+
+/* 申請結果 */
+/* line 124, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.show_apply_now {
+  color: #000000;
+  font-size: 0.9em;
+}
+
+/* line 128, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.show_apply_ok {
+  color: #0000ff;
+  font-size: 0.9em;
+}
+
+/* line 132, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.show_apply_ng {
+  color: #ff0000;
+  font-size: 0.9em;
+}
+
+/* line 137, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#label {
+  font-size: 48px;
+  letter-spacing: .1em;
+  text-align: center;
+  color: #000000;
+}
+
+/* line 143, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#target {
+  font-size: 48px;
+  letter-spacing: .1em;
+  text-align: center;
+  color: #000000;
+}
+
+/* line 149, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#best {
+  font-size: 48px;
+  letter-spacing: .1em;
+  text-align: center;
+  color: #bb0000;
+}
+
+/* line 155, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.typing {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 160, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#backtype {
+  text-align: center;
+  display: none;
+}
+
+/* line 165, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#timer {
+  font-size: 48px;
+  letter-spacing: .1em;
+  text-align: center;
+  color: #000000;
+}
+
+/* line 173, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+#ranking-table th, #ranking-table td {
+  text-align: center;
+}
+
+/* line 178, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.footer_logo {
+  text-align: center;
+}
+
+/* line 185, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/users.scss */
+.line_login:hover {
+  opacity: 0.8;
+}

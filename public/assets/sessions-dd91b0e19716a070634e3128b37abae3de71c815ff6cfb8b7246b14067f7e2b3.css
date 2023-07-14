@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* ログインフォーム */
+/* line 4, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/sessions.scss */
+.label-login {
+  margin-top: 5px;
+}
+
+/* line 8, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/sessions.scss */
+.btn-login {
+  margin-top: 10px;
+}
+
+/* line 12, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/sessions.scss */
+.checkbox-login {
+  width: auto;
+  margin-left: 25px;
+}
+/* line 15, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/sessions.scss */
+.checkbox-login span {
+  font-weight: normal;
+}

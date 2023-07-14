@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* 拠点情報テーブル */
+/* line 4, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/bases.scss */
+#table-bases th, #table-bases td {
+  text-align: center;
+}
+
+/* line 9, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/bases.scss */
+.base_label {
+  margin-top: 5px;
+}
+
+/* line 13, /Users/yamadakousuke/ruby_project/portfolio/jcita_basic/app/assets/stylesheets/bases.scss */
+.btn-base-info {
+  margin-top: 10px;
+}
