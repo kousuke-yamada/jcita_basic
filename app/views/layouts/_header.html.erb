@@ -6,17 +6,20 @@
         <% if logged_in? %>
           <% if admin_user? %>
             <li><%= link_to "ユーザー一覧", users_path %></li>
-
           <% end %>
+
+          <li><%= link_to "モード選択", current_user %></li>
+          <li><%= link_to "マイスコア", ranking_user_path(current_user) %></li>
+          
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              メニュー <b class="caret"></b>
+              👤 <%= current_user.name %> さん<b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <% unless admin_user? %>
-                <li><%= link_to "モード選択", current_user %></li>
-                <li><%= link_to "マイスコア", ranking_user_path(current_user) %></li>
-                <li><%= link_to "アカウント", edit_user_path(current_user) %></li>
+                <!-- <li><%= link_to "モード選択", current_user %></li>
+                <li><%= link_to "マイスコア", ranking_user_path(current_user) %></li> -->
+                <li><%= link_to "アカウント情報", edit_user_path(current_user) %></li>
               <% end %>
               
               <li class="divider"></li>

@@ -11,9 +11,11 @@ class SessionsController < ApplicationController
       
       if user.admin?
         # 管理者は管理画面に飛ばす
+        flash[:success] = 'ログインしました。'
         redirect_to users_url
       else
         # 一般ユーザー、上長ユーザーは勤怠画面に飛ばす
+        flash[:success] = 'ログインしました。'
         redirect_back_or user
       end
     else
